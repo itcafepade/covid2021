@@ -23,7 +23,7 @@
           <div class="col-xl-4 offset-xl-1 col-lg-5 col-md-5 col-sm-12 pr-0">
             <informacion />
           </div>
-          <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
+          <div class="col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12">
             <div class="bg-white rounded-graphic">
               <canvas ref="myChart" width="100%"></canvas>
             </div>

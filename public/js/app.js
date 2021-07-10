@@ -51323,7 +51323,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12" },
+            { staticClass: "col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12" },
             [
               _c("div", { staticClass: "bg-white rounded-graphic" }, [
                 _c("canvas", { ref: "myChart", attrs: { width: "100%" } })
