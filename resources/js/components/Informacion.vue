@@ -17,7 +17,7 @@
       <div class="container">
         <div class="row pb-1">
           <div class="col-md-2 col-sm-2 col-2 offset-1 pl-1">
-            <img src="/imgs/persona.png" alt="" />
+            <img src="/imgs/gel.png" alt="" />
           </div>
           <div class="col-md-7 col-sm-9 col-8 pr-0">
             <h6 class="mb-0">Protocolo completo</h6>
@@ -30,7 +30,7 @@
       <div class="container">
         <div class="row pb-1">
           <div class="col-md-2 col-sm-2 col-2 offset-1 pl-1">
-            <img src="/imgs/persona.png" alt="" />
+            <img src="/imgs/mascara.png" alt="" />
           </div>
           <div class="col-md-7 col-sm-9 col-8 pr-0">
             <h6 class="mb-0">Personas con mascarilla</h6>
@@ -43,7 +43,7 @@
       <div class="container">
         <div class="row pb-1">
           <div class="col-md-2 col-sm-2 col-2 offset-1 pl-1">
-            <img src="/imgs/persona.png" alt="" />
+            <img src="/imgs/sin-mascara.png" alt="" />
           </div>
           <div class="col-md-7 col-sm-9 col-8 pr-0">
             <h6 class="mb-0">Personas sin mascarilla</h6>
@@ -56,7 +56,7 @@
       <div class="container">
         <div class="row pb-1">
           <div class="col-md-2 col-sm-2 col-2 offset-1 pl-1">
-            <img src="/imgs/persona.png" alt="" />
+            <img src="/imgs/temperatura.png" alt="" />
           </div>
           <div class="col-md-7 col-sm-9 col-8 pr-0">
             <h6 class="mb-0">Personas con temperatura</h6>

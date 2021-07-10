@@ -24,7 +24,7 @@
             <informacion />
           </div>
           <div class="col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12">
-            <div class="bg-white rounded">
+            <div class="bg-white rounded-graphic">
               <canvas ref="myChart" width="100%"></canvas>
             </div>
           </div>

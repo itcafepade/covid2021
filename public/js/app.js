@@ -51090,7 +51090,7 @@ var staticRenderFns = [
             _c(
               "div",
               { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
-              [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+              [_c("img", { attrs: { src: "/imgs/gel.png", alt: "" } })]
             ),
             _vm._v(" "),
             _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
@@ -51108,7 +51108,7 @@ var staticRenderFns = [
             _c(
               "div",
               { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
-              [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+              [_c("img", { attrs: { src: "/imgs/mascara.png", alt: "" } })]
             ),
             _vm._v(" "),
             _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
@@ -51128,7 +51128,7 @@ var staticRenderFns = [
             _c(
               "div",
               { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
-              [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+              [_c("img", { attrs: { src: "/imgs/sin-mascara.png", alt: "" } })]
             ),
             _vm._v(" "),
             _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
@@ -51151,7 +51151,11 @@ var staticRenderFns = [
               _c(
                 "div",
                 { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
-                [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+                [
+                  _c("img", {
+                    attrs: { src: "/imgs/temperatura.png", alt: "" }
+                  })
+                ]
               ),
               _vm._v(" "),
               _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
@@ -51210,7 +51214,7 @@ var render = function() {
             "div",
             { staticClass: "col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12" },
             [
-              _c("div", { staticClass: "bg-white rounded" }, [
+              _c("div", { staticClass: "bg-white rounded-graphic" }, [
                 _c("canvas", { ref: "myChart", attrs: { width: "100%" } })
               ])
             ]
