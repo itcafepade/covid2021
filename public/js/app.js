@@ -2124,6 +2124,50 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 var DATA_COUNT = 6;
@@ -51336,7 +51380,9 @@ var render = function() {
       _vm._m(1)
     ]),
     _vm._v(" "),
-    _vm._m(2)
+    _vm._m(2),
+    _vm._v(" "),
+    _vm._m(3)
   ])
 }
 var staticRenderFns = [
@@ -51357,8 +51403,16 @@ var staticRenderFns = [
         _c("div", { staticClass: "col-md-12 col-sm-12 mb-3 pr-0" }, [
           _c(
             "a",
-            { staticClass: "btn btn-primary ml-5", attrs: { href: "#" } },
-            [_vm._v("Filtrar")]
+            {
+              staticClass: "btn btn-primary ml-5",
+              attrs: {
+                href: "#",
+                "data-toggle": "modal",
+                title: "Filtrar",
+                "data-target": "#modalFiltro"
+              }
+            },
+            [_c("i", { staticClass: "bi bi-funnel" }), _vm._v(" Filtrar")]
           )
         ])
       ])
@@ -51461,6 +51515,94 @@ var staticRenderFns = [
         ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "modal fade", attrs: { id: "modalFiltro" } },
+      [
+        _c("div", { staticClass: "modal-dialog" }, [
+          _c("div", { staticClass: "modal-content" }, [
+            _c("div", { staticClass: "modal-header" }, [
+              _c(
+                "h5",
+                {
+                  staticClass: "modal-title text-darkblue",
+                  attrs: { id: "staticBackdropLabel" }
+                },
+                [_vm._v("\n            Filtrar\n          ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "close text-darkblue",
+                  attrs: {
+                    type: "button",
+                    "data-dismiss": "modal",
+                    "aria-label": "Close"
+                  }
+                },
+                [_c("i", { staticClass: "bi bi-x-lg" })]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-body" }, [
+              _c("h5", { staticClass: "lead mb-0 text-darkblue" }, [
+                _vm._v("Inicio")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control mb-3",
+                attrs: { type: "date", id: "filterStartDate" }
+              }),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control mb-3",
+                attrs: { type: "time", id: "filterStartTime" }
+              }),
+              _vm._v(" "),
+              _c("h5", { staticClass: "lead mb-0 text-darkblue" }, [
+                _vm._v("Final")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control mb-3",
+                attrs: { type: "date", id: "filterEndDate" }
+              }),
+              _vm._v(" "),
+              _c("input", {
+                staticClass: "form-control mb-3",
+                attrs: { type: "time", id: "filterEndTime" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "modal-footer" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-warning",
+                  attrs: { type: "button", id: "cleanFilter" }
+                },
+                [_vm._v("\n            Limpiar\n          ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: { type: "button", id: "filter" }
+                },
+                [_vm._v("\n            Filtrar\n          ")]
+              )
+            ])
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

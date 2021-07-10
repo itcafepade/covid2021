@@ -10,9 +10,17 @@
               ITCA-FEPADE
             </h2>
           </div>
+          <!-- Button trigger modal -->
 
           <div class="col-md-12 col-sm-12 mb-3 pr-0">
-            <a href="#" class="btn btn-primary ml-5">Filtrar</a>
+            <a
+              href="#"
+              class="btn btn-primary ml-5"
+              data-toggle="modal"
+              title="Filtrar"
+              data-target="#modalFiltro"
+              ><i class="bi bi-funnel"></i> Filtrar</a
+            >
           </div>
         </div>
       </div>
@@ -136,11 +144,47 @@
       </div>
     </div>
     <!-- Galería -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="modalFiltro">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-darkblue" id="staticBackdropLabel">
+              Filtrar
+            </h5>
+            <button
+              type="button"
+              class="close text-darkblue"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <i class="bi bi-x-lg"></i>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h5 class="lead mb-0 text-darkblue">Inicio</h5>
+            <input type="date" class="form-control mb-3" id="filterStartDate" />
+            <input type="time" class="form-control mb-3" id="filterStartTime" />
+            <h5 class="lead mb-0 text-darkblue">Final</h5>
+            <input type="date" class="form-control mb-3" id="filterEndDate" />
+            <input type="time" class="form-control mb-3" id="filterEndTime" />
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" id="cleanFilter">
+              Limpiar
+            </button>
+            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> -->
+            <button type="button" class="btn btn-primary" id="filter">
+              Filtrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal -->
   </div>
-
-  <!--
-
-   -->
 </template>
 
   <script>
