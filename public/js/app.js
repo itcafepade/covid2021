@@ -2122,6 +2122,8 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 //
 //
 //
+//
+//
 
 
 var DATA_COUNT = 6;
@@ -51321,7 +51323,7 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            { staticClass: "col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12" },
+            { staticClass: "col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12" },
             [
               _c("div", { staticClass: "bg-white rounded-graphic" }, [
                 _c("canvas", { ref: "myChart", attrs: { width: "100%" } })
@@ -51369,10 +51371,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container mb-1" }, [
       _c("div", { staticClass: "row" }, [
         _c("div", { staticClass: "img-covid" }, [
-          _c("img", {
-            staticClass: "img-fondo",
-            attrs: { src: "/imgs/covid.svg" }
-          })
+          _c("img", { attrs: { src: "/imgs/covid.svg" } })
         ])
       ])
     ])
@@ -51384,9 +51383,11 @@ var staticRenderFns = [
     return _c("div", { staticClass: "container-fluid bg-white" }, [
       _c("div", { staticClass: "container" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6 pt-4 pb-4" }, [
+          _c("div", { staticClass: "col-md-5 offset-md-1 pt-4 pb-4" }, [
             _c("h2", { staticClass: "text-darkblue" }, [
-              _vm._v("Capturas registradas sin mascarilla")
+              _vm._v(
+                "\n            Fotografías registradas sin mascarilla\n          "
+              )
             ]),
             _vm._v(" "),
             _c("h5", { staticClass: "text-darkblue" }, [

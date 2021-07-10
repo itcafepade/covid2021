@@ -43,7 +43,7 @@
 
                         @auth
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link text-white" href="{{ url('/ajustes') }}">Ajustes</a>
                         </li>
                         @endauth
                     </ul>

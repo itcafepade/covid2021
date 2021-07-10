@@ -23,7 +23,7 @@
           <div class="col-xl-4 offset-xl-1 col-lg-5 col-md-5 col-sm-12 pr-0">
             <informacion />
           </div>
-          <div class="col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12">
+          <div class="col-xl-7 col-lg-7 col-md-7 col-sm-12 col-12">
             <div class="bg-white rounded-graphic">
               <canvas ref="myChart" width="100%"></canvas>
             </div>
@@ -34,7 +34,7 @@
       <div class="container mb-1">
         <div class="row">
           <div class="img-covid">
-            <img src="/imgs/covid.svg" class="img-fondo" />
+            <img src="/imgs/covid.svg" />
           </div>
         </div>
       </div>
@@ -69,8 +69,10 @@
     <div class="container-fluid bg-white">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 pt-4 pb-4">
-            <h2 class="text-darkblue">Capturas registradas sin mascarilla</h2>
+          <div class="col-md-5 offset-md-1 pt-4 pb-4">
+            <h2 class="text-darkblue">
+              Fotografías registradas sin mascarilla
+            </h2>
             <h5 class="text-darkblue">
               Estas fotografías son personas que no llevaban mascarilla o
               aquellas en las que el algoritmo no fue capaz de detectarla.
