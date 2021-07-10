@@ -90,6 +90,12 @@
         <main class="">
             @yield('content')
         </main>
+        <footer class="footer mt-auto py-3">
+            <div class="container text-center">
+                <span class="text-muted pt-3">Copyright © 2021 ITCA-FEPADE. <br>
+                    Todos los derechos reservados.</span>
+            </div>
+        </footer>
     </div>
 </body>
 

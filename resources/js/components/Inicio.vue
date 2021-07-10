@@ -1,54 +1,144 @@
 <template>
-  <div class="container-fluid">
-    <div class="row overflow-hidden">
-      <div class="landing bg-dark-blue">
-        <div class="col-md-12 col-sm-12">
-          <h2 class="text-center mt-3">
-            Resumen general de visistantes <br />
-            ITCA-FEPADE
-          </h2>
-        </div>
-        <div class="col-md-12 col-sm-12 mb-3">
-          <a href="#" class="btn btn-primary ml-5">Filtrar</a>
-        </div>
-        <div class="img-covid overflow-hidden">
-          <img src="/imgs/covid.svg" class="img-fondo" />
-        </div>
+  <div class="container-fluid p-0">
+    <div class="landing bg-dark-blue">
+      <!-- Encabezado -->
+      <div class="container">
         <div class="row">
-          <div class="col-md-5 col-sm-12 pr-0">
-            <div class="container">
-              <informacion />
-            </div>
+          <div class="col-md-12 col-sm-12">
+            <h2 class="text-center mt-3">
+              Resumen general de visistantes <br />
+              ITCA-FEPADE
+            </h2>
           </div>
 
-          <div class="col-md-6 col-sm-12 col-12 pl-0" style="height: 300px">
-            <div class="container-fluid bg-white rounded">
-              <canvas ref="myChart" width="100%" height="60"></canvas>
+          <div class="col-md-12 col-sm-12 mb-3 pr-0">
+            <a href="#" class="btn btn-primary ml-5">Filtrar</a>
+          </div>
+        </div>
+      </div>
+      <!-- Encabezado -->
+      <!-- Datos -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xl-4 offset-xl-1 col-lg-5 col-md-5 col-sm-12 pr-0">
+            <informacion />
+          </div>
+          <div class="col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12">
+            <div class="bg-white rounded">
+              <canvas ref="myChart" width="100%"></canvas>
             </div>
           </div>
         </div>
       </div>
-      <div class="svg">
-        <svg
-          height="100%"
-          width="100%"
-          id="svg"
-          viewBox="0 0 1440 400"
-          xmlns="http://www.w3.org/2000/svg"
-          class="transition duration-300 ease-in-out delay-150"
-        >
-          <path
-            d="M 0,400 C 0,400 0,200 0,200 C 124.35714285714286,171 248.71428571428572,142 356,141 C 463.2857142857143,140 553.5000000000001,166.99999999999997 669,193 C 784.4999999999999,219.00000000000003 925.2857142857142,244.00000000000003 1058,245 C 1190.7142857142858,245.99999999999997 1315.357142857143,223 1440,200 C 1440,200 1440,400 1440,400 Z"
-            stroke="none"
-            stroke-width="0"
-            fill="#212529ff"
-            class="transition-all duration-300 ease-in-out delay-150"
-            transform="rotate(-180 720 200)"
-          ></path>
-        </svg>
+
+      <div class="container mb-1">
+        <div class="row">
+          <div class="img-covid">
+            <img src="/imgs/covid.svg" class="img-fondo" />
+          </div>
+        </div>
+      </div>
+      <!-- Datos -->
+      <!-- SVG -->
+      <!-- <div class="container-fluid d-none d-sm-none d-md-block">
+        <div class="row">
+          <div class="svg mr-0">
+            <svg
+              height="100%"
+              width="100%"
+              id="svg"
+              viewBox="0 0 1440 400"
+              xmlns="http://www.w3.org/2000/svg"
+              class="transition duration-300 ease-in-out delay-150"
+            >
+              <path
+                d="M 0,400 C 0,400 0,200 0,200 C 124.35714285714286,171 248.71428571428572,142 356,141 C 463.2857142857143,140 553.5000000000001,166.99999999999997 669,193 C 784.4999999999999,219.00000000000003 925.2857142857142,244.00000000000003 1058,245 C 1190.7142857142858,245.99999999999997 1315.357142857143,223 1440,200 C 1440,200 1440,400 1440,400 Z"
+                stroke="none"
+                stroke-width="0"
+                fill="#212529ff"
+                class="transition-all duration-300 ease-in-out delay-150"
+                transform="rotate(-180 720 200)"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div> -->
+      <!-- SVG -->
+    </div>
+    <!-- Galería -->
+    <div class="container-fluid bg-white">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 pt-4 pb-4">
+            <h2 class="text-darkblue">Capturas registradas sin mascarilla</h2>
+            <h5 class="text-darkblue">
+              Estas fotografías son personas que no llevaban mascarilla o
+              aquellas en las que el algoritmo no fue capaz de detectarla.
+            </h5>
+          </div>
+          <div class="col-md-6">
+            <div class="container">
+              <div class="row pb-4">
+                <div class="col-md-3 col-sm-4 col-4 pt-4">
+                  <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-3 col-sm-4 col-4 pt-4">
+                  <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-3 col-sm-4 col-4 pt-4">
+                  <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-3 col-sm-4 col-4 pt-4">
+                  <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-3 col-sm-4 col-4 pt-4">
+                  <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-3 col-sm-4 col-4 pt-4">
+                  <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-3 col-sm-4 col-4 pt-4">
+                  <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+                <div class="col-md-3 col-sm-4 col-4 pt-4">
+                  <img
+                    src="https://cdn.vuetifyjs.com/images/john.jpg"
+                    class="img-fluid rounded-circle"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <!-- Galería -->
   </div>
+
+  <!--
+
+   -->
 </template>
 
   <script>

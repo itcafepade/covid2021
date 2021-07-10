@@ -1940,6 +1940,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -1969,6 +1979,96 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -50705,7 +50805,7 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
   null,
   null,
   null
-
+  
 )
 
 /* hot reload */
@@ -50744,7 +50844,7 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
   null,
   null,
   null
-
+  
 )
 
 /* hot reload */
@@ -50783,7 +50883,7 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
   null,
   null,
   null
-
+  
 )
 
 /* hot reload */
@@ -50805,7 +50905,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default);
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -50821,7 +50921,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Informacion_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Informacion.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Informacion.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Informacion_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default);
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Informacion_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -50837,7 +50937,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Inicio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Inicio.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Inicio.vue?vue&type=script&lang=js&");
- /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Inicio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default);
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Inicio_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__.default); 
 
 /***/ }),
 
@@ -50963,82 +51063,108 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [_vm._v("Personas visitantes")]),
+    return _c("div", { staticClass: "container pb-2" }, [
+      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row pb-1" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+              [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+            ),
             _vm._v(" "),
-            _c("h2", [_vm._v("100")])
+            _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+              _c("h6", { staticClass: "mb-0" }, [
+                _vm._v("Personas visitantes")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("100")])
+            ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [_vm._v("Protocolo completo")]),
+      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row pb-1" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+              [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+            ),
             _vm._v(" "),
-            _c("h2", [_vm._v("65 (65.00%)")])
+            _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+              _c("h6", { staticClass: "mb-0" }, [_vm._v("Protocolo completo")]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("65 (65.00%)")])
+            ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [
-              _vm._v("Personas con mascarilla")
-            ]),
+      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row pb-1" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+              [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+            ),
             _vm._v(" "),
-            _c("h2", [_vm._v("70 (70.00%)")])
+            _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+              _c("h6", { staticClass: "mb-0" }, [
+                _vm._v("Personas con mascarilla")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("70 (70.00%)")])
+            ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [
-              _vm._v("Personas sin mascarilla")
-            ]),
+      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row pb-1" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+              [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+            ),
             _vm._v(" "),
-            _c("h2", [_vm._v("30 (30.00%)")])
+            _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+              _c("h6", { staticClass: "mb-0" }, [
+                _vm._v("Personas sin mascarilla")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("30 (30.00%)")])
+            ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [
-              _vm._v("Personas con temperatura")
-            ]),
-            _vm._v(" "),
-            _c("h2", [_vm._v("5 (5.00%)")])
+      _c(
+        "div",
+        { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12 pr-0" },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row pb-1" }, [
+              _c(
+                "div",
+                { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+                [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+                _c("h6", { staticClass: "mb-0" }, [
+                  _vm._v("Personas con temperatura")
+                ]),
+                _vm._v(" "),
+                _c("h2", [_vm._v("5 (5.00%)")])
+              ])
+            ])
           ])
-        ])
-      ])
+        ]
+      )
     ])
   }
 ]
@@ -51064,67 +51190,38 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container-fluid" }, [
-    _c("div", { staticClass: "row overflow-hidden" }, [
-      _c("div", { staticClass: "landing bg-dark-blue" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _vm._m(2),
-        _vm._v(" "),
+  return _c("div", { staticClass: "container-fluid p-0" }, [
+    _c("div", { staticClass: "landing bg-dark-blue" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "container-fluid" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-5 col-sm-12 pr-0" }, [
-            _c("div", { staticClass: "container" }, [_c("informacion")], 1)
-          ]),
-          _vm._v(" "),
           _c(
             "div",
             {
-              staticClass: "col-md-6 col-sm-12 col-12 pl-0",
-              staticStyle: { height: "300px" }
+              staticClass:
+                "col-xl-4 offset-xl-1 col-lg-5 col-md-5 col-sm-12 pr-0"
             },
+            [_c("informacion")],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12" },
             [
-              _c("div", { staticClass: "container-fluid bg-white rounded" }, [
-                _c("canvas", {
-                  ref: "myChart",
-                  attrs: { width: "100%", height: "60" }
-                })
+              _c("div", { staticClass: "bg-white rounded" }, [
+                _c("canvas", { ref: "myChart", attrs: { width: "100%" } })
               ])
             ]
           )
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "svg" }, [
-        _c(
-          "svg",
-          {
-            staticClass: "transition duration-300 ease-in-out delay-150",
-            attrs: {
-              height: "100%",
-              width: "100%",
-              id: "svg",
-              viewBox: "0 0 1440 400",
-              xmlns: "http://www.w3.org/2000/svg"
-            }
-          },
-          [
-            _c("path", {
-              staticClass: "transition-all duration-300 ease-in-out delay-150",
-              attrs: {
-                d:
-                  "M 0,400 C 0,400 0,200 0,200 C 124.35714285714286,171 248.71428571428572,142 356,141 C 463.2857142857143,140 553.5000000000001,166.99999999999997 669,193 C 784.4999999999999,219.00000000000003 925.2857142857142,244.00000000000003 1058,245 C 1190.7142857142858,245.99999999999997 1315.357142857143,223 1440,200 C 1440,200 1440,400 1440,400 Z",
-                stroke: "none",
-                "stroke-width": "0",
-                fill: "#212529ff",
-                transform: "rotate(-180 720 200)"
-              }
-            })
-          ]
-        )
-      ])
-    ])
+      _vm._m(1)
+    ]),
+    _vm._v(" "),
+    _vm._m(2)
   ])
 }
 var staticRenderFns = [
@@ -51132,11 +51229,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12 col-sm-12" }, [
-      _c("h2", { staticClass: "text-center mt-3" }, [
-        _vm._v("\n          Resumen general de visistantes "),
-        _c("br"),
-        _vm._v("\n          ITCA-FEPADE\n        ")
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12 col-sm-12" }, [
+          _c("h2", { staticClass: "text-center mt-3" }, [
+            _vm._v("\n            Resumen general de visistantes "),
+            _c("br"),
+            _vm._v("\n            ITCA-FEPADE\n          ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12 col-sm-12 mb-3 pr-0" }, [
+          _c(
+            "a",
+            { staticClass: "btn btn-primary ml-5", attrs: { href: "#" } },
+            [_vm._v("Filtrar")]
+          )
+        ])
       ])
     ])
   },
@@ -51144,9 +51253,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12 col-sm-12 mb-3" }, [
-      _c("a", { staticClass: "btn btn-primary ml-5", attrs: { href: "#" } }, [
-        _vm._v("Filtrar")
+    return _c("div", { staticClass: "container mb-1" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "img-covid" }, [
+          _c("img", {
+            staticClass: "img-fondo",
+            attrs: { src: "/imgs/covid.svg" }
+          })
+        ])
       ])
     ])
   },
@@ -51154,8 +51268,84 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img-covid overflow-hidden" }, [
-      _c("img", { staticClass: "img-fondo", attrs: { src: "/imgs/covid.svg" } })
+    return _c("div", { staticClass: "container-fluid bg-white" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6 pt-4 pb-4" }, [
+            _c("h2", { staticClass: "text-darkblue" }, [
+              _vm._v("Capturas registradas sin mascarilla")
+            ]),
+            _vm._v(" "),
+            _c("h5", { staticClass: "text-darkblue" }, [
+              _vm._v(
+                "\n            Estas fotografías son personas que no llevaban mascarilla o\n            aquellas en las que el algoritmo no fue capaz de detectarla.\n          "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "row pb-4" }, [
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]
@@ -108721,7 +108911,7 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /************************************************************************/
 /******/ 	// The module cache
 /******/ 	var __webpack_module_cache__ = {};
-/******/
+/******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
@@ -108735,20 +108925,20 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /******/ 			loaded: false,
 /******/ 			exports: {}
 /******/ 		};
-/******/
+/******/ 	
 /******/ 		// Execute the module function
 /******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
+/******/ 	
 /******/ 		// Flag the module as loaded
 /******/ 		module.loaded = true;
-/******/
+/******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
 /******/ 	}
-/******/
+/******/ 	
 /******/ 	// expose the modules object (__webpack_modules__)
 /******/ 	__webpack_require__.m = __webpack_modules__;
-/******/
+/******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/chunk loaded */
 /******/ 	(() => {
@@ -108780,7 +108970,7 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /******/ 			return result;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -108792,7 +108982,7 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /******/ 			return getter;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -108804,7 +108994,7 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /******/ 			}
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/global */
 /******/ 	(() => {
 /******/ 		__webpack_require__.g = (function() {
@@ -108816,12 +109006,12 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /******/ 			}
 /******/ 		})();
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
 /******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
@@ -108832,7 +109022,7 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/node module decorator */
 /******/ 	(() => {
 /******/ 		__webpack_require__.nmd = (module) => {
@@ -108841,11 +109031,11 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /******/ 			return module;
 /******/ 		};
 /******/ 	})();
-/******/
+/******/ 	
 /******/ 	/* webpack/runtime/jsonp chunk loading */
 /******/ 	(() => {
 /******/ 		// no baseURI
-/******/
+/******/ 		
 /******/ 		// object to store loaded and loading chunks
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
@@ -108853,19 +109043,19 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /******/ 			"/js/app": 0,
 /******/ 			"css/app": 0
 /******/ 		};
-/******/
+/******/ 		
 /******/ 		// no chunk on demand loading
-/******/
+/******/ 		
 /******/ 		// no prefetching
-/******/
+/******/ 		
 /******/ 		// no preloaded
-/******/
+/******/ 		
 /******/ 		// no HMR
-/******/
+/******/ 		
 /******/ 		// no HMR manifest
-/******/
+/******/ 		
 /******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/
+/******/ 		
 /******/ 		// install a JSONP callback for chunk loading
 /******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
 /******/ 			var [chunkIds, moreModules, runtime] = data;
@@ -108888,20 +109078,20 @@ webpackContext.id = "./resources/js sync recursive \\.vue$/";
 /******/ 			}
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
-/******/
+/******/ 		
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
-/******/
+/******/ 	
 /************************************************************************/
-/******/
+/******/ 	
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
 /******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/
+/******/ 	
 /******/ })()
 ;
