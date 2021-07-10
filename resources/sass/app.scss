@@ -8,15 +8,144 @@
 @import '~bootstrap/scss/bootstrap';
 
 //Vuetify
-@import "~vuetify/dist/vuetify.min.css";
+// @import "~vuetify/dist/vuetify.min.css";
 
 // @import url('https://fonts.googleapis.com/css?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 // @import url('https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css');
 
-.container {
-    padding-top: 0px;
-    margin-top: 0px;
-    padding-bottom: 0px;
-    margin-bottom: 0px;
+// .container {
+//     padding-top: 0px;
+//     margin-top: 0px;
+//     padding-bottom: 0px;
+//     margin-bottom: 0px;
+// }
+
+* {
+    z-index: 10;
+}
+
+.bg-dark-blue {
+    background-color: $darkblue;
+}
+
+p,
+span,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $white;
+}
+
+.text-white {
+    color: $white;
+}
+
+.svg {
+    // padding-top: 0px;
+    // margin-top: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+.landing {
+    width: 100%;
+    height: 420px;
+    // margin: 0px;
+}
+
+.img-covid img {
+    // z-index: 3;
+    top: 5px;
+    opacity: 30%;
+    height: 600px;
+}
+
+.img-covid {
+    position: absolute;
+    overflow: hidden;
+    width: 410px;
+    height: 600px;
+    z-index: 5;
+    right: 0px;
+    top: 30px;
+}
+
+@media (min-width: 768px) {
+    .img-covid img {
+        top: 5px;
+        opacity: 30%;
+        height: 600px;
+    }
+
+    .img-covid {
+        position: absolute;
+        overflow: hidden;
+        width: 410px;
+        height: 600px;
+        z-index: 5;
+        right: 0px;
+        top: 30px;
+    }
+
+    canvas {
+        height: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .img-covid img {
+        top: 5px;
+        opacity: 30%;
+        height: 550px;
+    }
+
+    .img-covid {
+        position: absolute;
+        overflow: hidden;
+        width: 350px;
+        height: 550px;
+        z-index: 5;
+        right: 0px;
+        top: 30px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    canvas {
+        height: 400px;
+    }
+}
+
+@media (max-width: 576px) {
+    .img-covid img {
+        top: 5px;
+        opacity: 30%;
+        height: 500px;
+    }
+
+    .img-covid {
+        position: absolute;
+        overflow: hidden;
+        width: 250px;
+        height: 550px;
+        z-index: 5;
+        // right: -150px;
+        right: 0px;
+        top: 30px;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    canvas {
+        height: 400px;
+    }
 }

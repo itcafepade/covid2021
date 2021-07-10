@@ -35,5 +35,5 @@ Vue.use(Vuetify);
 
 const app = new Vue({
     el: '#app',
-    vuetify: new Vuetify(),
+    // vuetify: new Vuetify(),
 });
