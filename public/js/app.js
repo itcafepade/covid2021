@@ -1940,6 +1940,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
 
 /***/ }),
@@ -1969,6 +1979,96 @@ function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToAr
 
 function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -50963,82 +51063,112 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [_vm._v("Personas visitantes")]),
+    return _c("div", { staticClass: "container pb-2" }, [
+      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row pb-1" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+              [_c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })]
+            ),
             _vm._v(" "),
-            _c("h2", [_vm._v("100")])
+            _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+              _c("h6", { staticClass: "mb-0" }, [
+                _vm._v("Personas visitantes")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("100")])
+            ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [_vm._v("Protocolo completo")]),
+      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row pb-1" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+              [_c("img", { attrs: { src: "/imgs/gel.png", alt: "" } })]
+            ),
             _vm._v(" "),
-            _c("h2", [_vm._v("65 (65.00%)")])
+            _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+              _c("h6", { staticClass: "mb-0" }, [_vm._v("Protocolo completo")]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("65 (65.00%)")])
+            ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [
-              _vm._v("Personas con mascarilla")
-            ]),
+      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row pb-1" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+              [_c("img", { attrs: { src: "/imgs/mascara.png", alt: "" } })]
+            ),
             _vm._v(" "),
-            _c("h2", [_vm._v("70 (70.00%)")])
+            _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+              _c("h6", { staticClass: "mb-0" }, [
+                _vm._v("Personas con mascarilla")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("70 (70.00%)")])
+            ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [
-              _vm._v("Personas sin mascarilla")
-            ]),
+      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row pb-1" }, [
+            _c(
+              "div",
+              { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+              [_c("img", { attrs: { src: "/imgs/sin-mascara.png", alt: "" } })]
+            ),
             _vm._v(" "),
-            _c("h2", [_vm._v("30 (30.00%)")])
+            _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+              _c("h6", { staticClass: "mb-0" }, [
+                _vm._v("Personas sin mascarilla")
+              ]),
+              _vm._v(" "),
+              _c("h2", [_vm._v("30 (30.00%)")])
+            ])
           ])
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "col-md-12 col-sm-11 offset-sm-2 col-12" }, [
-        _c("div", { staticClass: "row pb-1" }, [
-          _c("div", { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" }, [
-            _c("img", { attrs: { src: "/imgs/persona.png", alt: "" } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-md-7 col-sm-9 col-8" }, [
-            _c("h6", { staticClass: "mb-0" }, [
-              _vm._v("Personas con temperatura")
-            ]),
-            _vm._v(" "),
-            _c("h2", [_vm._v("5 (5.00%)")])
+      _c(
+        "div",
+        { staticClass: "col-md-12 col-sm-11 offset-sm-1 col-12 pr-0" },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row pb-1" }, [
+              _c(
+                "div",
+                { staticClass: "col-md-2 col-sm-2 col-2 offset-1 pl-1" },
+                [
+                  _c("img", {
+                    attrs: { src: "/imgs/temperatura.png", alt: "" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-7 col-sm-9 col-8 pr-0" }, [
+                _c("h6", { staticClass: "mb-0" }, [
+                  _vm._v("Personas con temperatura")
+                ]),
+                _vm._v(" "),
+                _c("h2", [_vm._v("5 (5.00%)")])
+              ])
+            ])
           ])
-        ])
-      ])
+        ]
+      )
     ])
   }
 ]
@@ -51064,67 +51194,38 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container-fluid" }, [
-    _c("div", { staticClass: "row overflow-hidden" }, [
-      _c("div", { staticClass: "landing bg-dark-blue" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _vm._m(1),
-        _vm._v(" "),
-        _vm._m(2),
-        _vm._v(" "),
+  return _c("div", { staticClass: "container-fluid p-0" }, [
+    _c("div", { staticClass: "landing bg-dark-blue" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "container-fluid" }, [
         _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-5 col-sm-12 pr-0" }, [
-            _c("div", { staticClass: "container" }, [_c("informacion")], 1)
-          ]),
-          _vm._v(" "),
           _c(
             "div",
             {
-              staticClass: "col-md-6 col-sm-12 col-12 pl-0",
-              staticStyle: { height: "300px" }
+              staticClass:
+                "col-xl-4 offset-xl-1 col-lg-5 col-md-5 col-sm-12 pr-0"
             },
+            [_c("informacion")],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12" },
             [
-              _c("div", { staticClass: "container-fluid bg-white rounded" }, [
-                _c("canvas", {
-                  ref: "myChart",
-                  attrs: { width: "100%", height: "60" }
-                })
+              _c("div", { staticClass: "bg-white rounded-graphic" }, [
+                _c("canvas", { ref: "myChart", attrs: { width: "100%" } })
               ])
             ]
           )
         ])
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "svg" }, [
-        _c(
-          "svg",
-          {
-            staticClass: "transition duration-300 ease-in-out delay-150",
-            attrs: {
-              height: "100%",
-              width: "100%",
-              id: "svg",
-              viewBox: "0 0 1440 400",
-              xmlns: "http://www.w3.org/2000/svg"
-            }
-          },
-          [
-            _c("path", {
-              staticClass: "transition-all duration-300 ease-in-out delay-150",
-              attrs: {
-                d:
-                  "M 0,400 C 0,400 0,200 0,200 C 124.35714285714286,171 248.71428571428572,142 356,141 C 463.2857142857143,140 553.5000000000001,166.99999999999997 669,193 C 784.4999999999999,219.00000000000003 925.2857142857142,244.00000000000003 1058,245 C 1190.7142857142858,245.99999999999997 1315.357142857143,223 1440,200 C 1440,200 1440,400 1440,400 Z",
-                stroke: "none",
-                "stroke-width": "0",
-                fill: "#212529ff",
-                transform: "rotate(-180 720 200)"
-              }
-            })
-          ]
-        )
-      ])
-    ])
+      _vm._m(1)
+    ]),
+    _vm._v(" "),
+    _vm._m(2)
   ])
 }
 var staticRenderFns = [
@@ -51132,11 +51233,23 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12 col-sm-12" }, [
-      _c("h2", { staticClass: "text-center mt-3" }, [
-        _vm._v("\n          Resumen general de visistantes "),
-        _c("br"),
-        _vm._v("\n          ITCA-FEPADE\n        ")
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "col-md-12 col-sm-12" }, [
+          _c("h2", { staticClass: "text-center mt-3" }, [
+            _vm._v("\n            Resumen general de visistantes "),
+            _c("br"),
+            _vm._v("\n            ITCA-FEPADE\n          ")
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "col-md-12 col-sm-12 mb-3 pr-0" }, [
+          _c(
+            "a",
+            { staticClass: "btn btn-primary ml-5", attrs: { href: "#" } },
+            [_vm._v("Filtrar")]
+          )
+        ])
       ])
     ])
   },
@@ -51144,9 +51257,14 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12 col-sm-12 mb-3" }, [
-      _c("a", { staticClass: "btn btn-primary ml-5", attrs: { href: "#" } }, [
-        _vm._v("Filtrar")
+    return _c("div", { staticClass: "container mb-1" }, [
+      _c("div", { staticClass: "row" }, [
+        _c("div", { staticClass: "img-covid" }, [
+          _c("img", {
+            staticClass: "img-fondo",
+            attrs: { src: "/imgs/covid.svg" }
+          })
+        ])
       ])
     ])
   },
@@ -51154,8 +51272,84 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "img-covid overflow-hidden" }, [
-      _c("img", { staticClass: "img-fondo", attrs: { src: "/imgs/covid.svg" } })
+    return _c("div", { staticClass: "container-fluid bg-white" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-6 pt-4 pb-4" }, [
+            _c("h2", { staticClass: "text-darkblue" }, [
+              _vm._v("Capturas registradas sin mascarilla")
+            ]),
+            _vm._v(" "),
+            _c("h5", { staticClass: "text-darkblue" }, [
+              _vm._v(
+                "\n            Estas fotografías son personas que no llevaban mascarilla o\n            aquellas en las que el algoritmo no fue capaz de detectarla.\n          "
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6" }, [
+            _c("div", { staticClass: "container" }, [
+              _c("div", { staticClass: "row pb-4" }, [
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-md-3 col-sm-4 col-4 pt-4" }, [
+                  _c("img", {
+                    staticClass: "img-fluid rounded-circle",
+                    attrs: { src: "https://cdn.vuetifyjs.com/images/john.jpg" }
+                  })
+                ])
+              ])
+            ])
+          ])
+        ])
+      ])
     ])
   }
 ]

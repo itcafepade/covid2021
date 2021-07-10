@@ -21,6 +21,10 @@
 //     margin-bottom: 0px;
 // }
 
+.text-darkblue {
+    color: $darkblue;
+}
+
 * {
     z-index: 10;
 }
@@ -46,23 +50,22 @@ h6 {
 }
 
 .svg {
-    // padding-top: 0px;
-    // margin-top: 0px;
     width: 100%;
-    z-index: 1;
+    // z-index: 10;
 }
 
 .landing {
     width: 100%;
-    height: 420px;
-    // margin: 0px;
+    height: 600px;
+}
+
+.rounded-graphic {
+    border-radius: 8%;
 }
 
 .img-covid img {
-    // z-index: 3;
     top: 5px;
     opacity: 30%;
-    height: 600px;
 }
 
 .img-covid {
@@ -75,9 +78,14 @@ h6 {
     top: 30px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
+
+    .landing {
+        width: 100%;
+        height: 600px;
+    }
+
     .img-covid img {
-        top: 5px;
         opacity: 30%;
         height: 600px;
     }
@@ -85,7 +93,7 @@ h6 {
     .img-covid {
         position: absolute;
         overflow: hidden;
-        width: 410px;
+        width: 400px;
         height: 600px;
         z-index: 5;
         right: 0px;
@@ -97,7 +105,88 @@ h6 {
     }
 }
 
+@media (min-width: 992px) {
+
+    .landing {
+        width: 100%;
+        height: 700px;
+    }
+
+    .img-covid img {
+        opacity: 30%;
+        height: 700px;
+    }
+
+    .img-covid {
+        position: absolute;
+        overflow: hidden;
+        width: 400px;
+        height: 700px;
+        z-index: 5;
+        right: 0px;
+        top: 30px;
+    }
+
+    canvas {
+        height: 400px;
+    }
+}
+
+@media (max-width: 992px) {
+    .landing {
+        width: 100%;
+        height: 550px;
+    }
+
+    .img-covid img {
+        opacity: 30%;
+        height: 600px;
+    }
+
+    .img-covid {
+        position: absolute;
+        overflow: hidden;
+        width: 400px;
+        height: 600px;
+        z-index: 5;
+        right: 0px;
+        top: 30px;
+    }
+
+    canvas {
+        height: 380px;
+    }
+}
+
+@media (min-width: 768px) {
+    .img-covid img {
+        opacity: 30%;
+        height: 620px;
+    }
+
+    .img-covid {
+        position: absolute;
+        overflow: hidden;
+        width: 400px;
+        height: 620px;
+        z-index: 5;
+        right: 0px;
+        top: 30px;
+    }
+
+    .landing {
+        width: 100%;
+        height: 610px;
+    }
+}
+
 @media (max-width: 768px) {
+
+    .landing {
+        width: 100%;
+        height: 820px;
+    }
+
     .img-covid img {
         top: 5px;
         opacity: 30%;
@@ -136,7 +225,7 @@ h6 {
         width: 250px;
         height: 550px;
         z-index: 5;
-        // right: -150px;
+        right: 0px;
         right: 0px;
         top: 30px;
     }
@@ -147,5 +236,10 @@ h6 {
 
     canvas {
         height: 400px;
+    }
+
+    .landing {
+        width: 100%;
+        height: 720px;
     }
 }
