@@ -7,19 +7,25 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-//Vuetify
-// @import "~vuetify/dist/vuetify.min.css";
+//Bootstrap Icons
+@import '~bootstrap-icons/font/bootstrap-icons';
 
-// @import url('https://fonts.googleapis.com/css?family=Material+Icons');
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
-// @import url('https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css');
 
-// .container {
-//     padding-top: 0px;
-//     margin-top: 0px;
-//     padding-bottom: 0px;
-//     margin-bottom: 0px;
-// }
+img {
+    width: 3rem;
+}
+
+.ajustes-text>h1 {
+    color: $darkblue;
+    // font-family: Impact, sans-serif;
+    // font-size: 3rem;
+    margin-top: 10px;
+}
+
+.temperatura-text {
+    color: $darkblue;
+}
 
 .text-darkblue {
     color: $darkblue;
