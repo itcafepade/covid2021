@@ -48,11 +48,5 @@ class crearAdmin extends Command
         ]);
 
         $this->info('Usuario administrador creado satisfactoriamente.');
-
-        Ajustes::create([
-            'temperatura' => new Decimal128(37.5),
-        ]);
-
-        $this->info('Temperatura por defecto asignada en 37.5°C');
     }
 }

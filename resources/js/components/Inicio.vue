@@ -190,73 +190,99 @@
   <script>
 import { Chart, registerables } from "chart.js";
 import informacion from "./Informacion.vue";
-
-const DATA_COUNT = 6;
-const labels = [];
-for (let i = 0; i < DATA_COUNT; ++i) {
-  labels.push(i.toString());
-}
-const datapoints = [32, 33.5, 34, 35, 36, 33];
-const data = {
-  labels: labels,
-  datasets: [
-    {
-      label: "Temp. Máxima",
-      data: [37.5, 37.5, 37.5, 37.5, 37.5, 37.5],
-      borderColor: "#FF6384",
-      fill: false,
-      cubicInterpolationMode: "monotone",
-      tension: 0.4,
-    },
-    {
-      label: "Temp. Visitante",
-      data: datapoints,
-      borderColor: "#36A2EB",
-      fill: false,
-      tension: 0.4,
-    },
-  ],
-};
+import axios from "axios";
 
 Chart.register(...registerables);
 
 export default {
   components: { informacion },
+  data() {
+    return {
+      temperaturaMaxima: "",
+    };
+  },
   mounted() {
-    const grafico = this.$refs.myChart.getContext("2d");
-    new Chart(grafico, {
-      type: "line",
-      data: data,
-      options: {
-        responsive: true,
-        plugins: {
-          title: {
-            display: true,
-            text: "Chart.js Line Chart - Cubic interpolation mode",
+    this.init();
+  },
+  methods: {
+    async init() {
+      await this.obtenerAjustes();
+      this.cargarGrafico();
+    },
+    async obtenerAjustes() {
+      try {
+        const res = await axios.get("api/ajustes");
+        this.temperaturaMaxima = res.data.ajustes.temperatura;
+      } catch (error) {
+        alerta.mensaje("Error al obtener el valor de la temperatura.", "error");
+      }
+    },
+    cargarGrafico() {
+      const DATA_COUNT = 6;
+      const labels = [];
+      const temperaturasMaximas = [];
+      for (let i = 0; i < DATA_COUNT; ++i) {
+        labels.push(i.toString());
+        console.log(this.temperaturaMaxima);
+        temperaturasMaximas.push(this.temperaturaMaxima);
+      }
+      const datapoints = [32, 33.5, 34, 35, 36, 33];
+      const data = {
+        labels: labels,
+        datasets: [
+          {
+            label: "Temp. Máxima",
+            data: temperaturasMaximas,
+            borderColor: "#FF6384",
+            fill: false,
+            cubicInterpolationMode: "monotone",
+            tension: 0.4,
           },
-        },
-        interaction: {
-          intersect: false,
-        },
-        scales: {
-          x: {
-            display: true,
+          {
+            label: "Temp. Visitante",
+            data: datapoints,
+            borderColor: "#36A2EB",
+            fill: false,
+            tension: 0.4,
+          },
+        ],
+      };
+
+      const grafico = this.$refs.myChart.getContext("2d");
+      new Chart(grafico, {
+        type: "line",
+        data: data,
+        options: {
+          responsive: true,
+          plugins: {
             title: {
               display: true,
+              text: "Temperatura visitantes a ITCA-FEPADE",
             },
           },
-          y: {
-            display: true,
-            title: {
+          interaction: {
+            intersect: false,
+          },
+          scales: {
+            x: {
               display: true,
-              text: "Value",
+              title: {
+                display: true,
+              },
             },
-            suggestedMin: 30,
-            suggestedMax: 42,
+            y: {
+              display: true,
+              title: {
+                display: true,
+                text: "Value",
+              },
+              suggestedMin: 30,
+              suggestedMax: 42,
+            },
           },
         },
-      },
-    });
+      });
+    },
   },
 };
 </script>

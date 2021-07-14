@@ -23,6 +23,9 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/ajustes', [App\Http\Controllers\AjustesController::class, 'index'])->name('ajustes');
     Route::get('/api/ajustes', [App\Http\Controllers\AjustesController::class, 'obtenerAjustes']);
     Route::post('/api/actualizarAjustes', [App\Http\Controllers\AjustesController::class, 'actualizar']);
+
+    //Registros
+    Route::resource('/api/registro', App\Http\Controllers\RegistroController::class);
 });
 
 Auth::routes();
