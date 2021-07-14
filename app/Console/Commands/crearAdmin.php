@@ -4,6 +4,8 @@ namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
 use App\Models\User;
+use App\Models\Ajustes;
+use MongoDB\BSON\Decimal128;
 use Hash;
 
 class crearAdmin extends Command
@@ -46,5 +48,11 @@ class crearAdmin extends Command
         ]);
 
         $this->info('Usuario administrador creado satisfactoriamente.');
+
+        Ajustes::create([
+            'temperatura' => new Decimal128(37.5),
+        ]);
+
+        $this->info('Temperatura por defecto asignada en 37.5°C');
     }
 }

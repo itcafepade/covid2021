@@ -18,9 +18,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/', function () {
         return view('home');
     });
+
+    //Ajustes
+    Route::get('/ajustes', [App\Http\Controllers\AjustesController::class, 'index'])->name('ajustes');
+    Route::get('/api/ajustes', [App\Http\Controllers\AjustesController::class, 'obtenerAjustes']);
+    Route::post('/api/actualizarAjustes', [App\Http\Controllers\AjustesController::class, 'actualizar']);
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/ajustes', [App\Http\Controllers\AjustesController::class, 'index'])->name('ajustes');
