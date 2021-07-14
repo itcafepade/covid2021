@@ -29,14 +29,11 @@ class AjustesController extends Controller
 
     public function actualizar(Request $request)
     {
-        // $ajuste = new Ajustes();
-        // $ajuste->_id = $request->_id;
-        // $ajuste->temperatura =  new Decimal128($request->temperatura);
         Ajustes::where('_id', $request->_id)
         ->update([
             'temperatura' => new Decimal128($request->temperatura)
         ]);
-        // dd($ajuste);
+
         return response()->json(['mensaje'=>'exito']);
     }
 }

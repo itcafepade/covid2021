@@ -20,9 +20,10 @@ class DatabaseSeeder extends Seeder
         Registro::create(
             [
             'temperatura'=>new Decimal128(36),
-            'protocolo_completo'=> true,
+            'protocoloCompleto'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
+            'usoDeGel' => new Decimal128(0.04)
         ]
         );
 
@@ -31,24 +32,28 @@ class DatabaseSeeder extends Seeder
             'protocolo_completo'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
+            'usoDeGel' => new Decimal128(0.04)
         ]);
         Registro::create([
             'temperatura'=>new Decimal128(34),
             'protocolo_completo'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
+            'usoDeGel' => new Decimal128(0.04)
             ]);
         Registro::create([
             'temperatura'=>new Decimal128(35),
             'protocolo_completo'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
+            'usoDeGel' => new Decimal128(0.04)
         ]);
         Registro::create([
             'temperatura'=>new Decimal128(38),
             'protocolo_completo'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
+            'usoDeGel' => new Decimal128(0.04)
         ]);
 
         Ajustes::create([

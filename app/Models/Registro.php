@@ -17,8 +17,9 @@ class registro extends Model
     protected $fillable = [
         'id',
         'temperatura',
-        'protocolo_completo',
+        'protocoloCompleto',
         'conMascarilla',
         'sinMascarilla',
+        'usoDeGel',
     ];
 }

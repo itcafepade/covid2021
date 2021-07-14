@@ -26,16 +26,33 @@
       </div>
       <!-- Encabezado -->
       <!-- Datos -->
-      <div class="container-fluid">
+      <div class="container-fluid" v-if="registros.length > 0">
         <div class="row">
           <div class="col-xl-4 offset-xl-1 col-lg-5 col-md-5 col-sm-12 pr-0">
-            <informacion />
+            <informacion
+              :totalDatos="totalDatos"
+              :conProtocoloCompleto="conProtocoloCompleto"
+              :conMascarilla="conMascarilla"
+              :sinMascarilla="sinMascarilla"
+              :usoDeGel="usoTotalDeGel"
+              :conTemperatura="conTemperatura"
+              :key="actualizarComponente"
+            />
           </div>
           <div class="col-xl-5 col-lg-7 col-md-7 col-sm-12 col-12">
             <div class="bg-white rounded-graphic">
               <canvas ref="myChart" width="100%"></canvas>
             </div>
           </div>
+        </div>
+      </div>
+      <div v-else class="text-center text-white">
+        <div
+          class="spinner-border text-light"
+          role="status"
+          style="width: 5rem; height: 5rem"
+        >
+          <span class="sr-only">Obteniendo los datos...</span>
         </div>
       </div>
 
@@ -191,6 +208,7 @@
 import { Chart, registerables } from "chart.js";
 import informacion from "./Informacion.vue";
 import axios from "axios";
+import moment from "moment";
 
 Chart.register(...registerables);
 
@@ -199,6 +217,15 @@ export default {
   data() {
     return {
       temperaturaMaxima: "",
+      registros: [],
+      fechaInicio: "",
+      fechaFinal: "",
+      conProtocoloCompleto: 0,
+      conMascarilla: 0,
+      sinMascarilla: 0,
+      usoTotalDeGel: 0,
+      conTemperatura: 0,
+      actualizarComponente: 0,
     };
   },
   mounted() {
@@ -207,6 +234,7 @@ export default {
   methods: {
     async init() {
       await this.obtenerAjustes();
+      await this.obtenerRegistros();
       this.cargarGrafico();
     },
     async obtenerAjustes() {
@@ -217,16 +245,44 @@ export default {
         alerta.mensaje("Error al obtener el valor de la temperatura.", "error");
       }
     },
+    async obtenerRegistros() {
+      try {
+        const res = await axios.get("api/registro");
+        this.registros = res.data.registros;
+        this.calculoDeRegistros();
+      } catch (error) {
+        alerta.mensaje("Error al obtener el valor de la temperatura.", "error");
+      }
+    },
     cargarGrafico() {
-      const DATA_COUNT = 6;
+      const DATA_COUNT = this.registros.length;
       const labels = [];
-      const temperaturasMaximas = [];
+      let temperaturasMaximas = [];
+      let datapoints = [];
+      let j = 1;
+
+      console.log(this.registros[0].created_at);
+
+      this.fechaInicio = moment(new Date(this.registros[0].created_at)).format(
+        "DD/MM/YYYY"
+      );
+      this.fechaFinal = moment(
+        new Date(this.registros[this.registros.length - 1].created_at)
+      ).format("DD/MM/YYYY");
+
       for (let i = 0; i < DATA_COUNT; ++i) {
-        labels.push(i.toString());
+        // labels.push(
+        //   moment(new Date(this.registros[i].created_at)).format(
+        //     "DD/MM/YYYY hh:mm A"
+        //   )
+        // );
+        labels.push(j.toString());
         console.log(this.temperaturaMaxima);
         temperaturasMaximas.push(this.temperaturaMaxima);
+        datapoints.push(this.registros[i].temperatura);
+        j++;
       }
-      const datapoints = [32, 33.5, 34, 35, 36, 33];
+
       const data = {
         labels: labels,
         datasets: [
@@ -257,7 +313,11 @@ export default {
           plugins: {
             title: {
               display: true,
-              text: "Temperatura visitantes a ITCA-FEPADE",
+              text: [
+                `Temperatura visitantes`,
+                "ITCA-FEPADE",
+                ` Desde: ${this.fechaInicio} Hasta: ${this.fechaFinal}`,
+              ],
             },
           },
           interaction: {
@@ -282,6 +342,40 @@ export default {
           },
         },
       });
+    },
+    calculoDeRegistros() {
+      this.totalDatos = this.registros.length;
+
+      let conProtocoloCompleto = 0;
+      let conMascarilla = 0;
+      let sinMascarilla = 0;
+      let usoTotalDeGel = 0;
+      let conTemperatura = 0;
+
+      this.registros.forEach((el) => {
+        if (el.protocolo_completo) {
+          conProtocoloCompleto++;
+          conMascarilla++;
+        }
+
+        if (!el.sinMascarilla) {
+          sinMascarilla++;
+        }
+
+        if (el.temperatura >= this.temperaturaMaxima) {
+          conTemperatura++;
+        }
+
+        usoTotalDeGel += parseFloat(el.usoDeGel);
+      });
+
+      this.conProtocoloCompleto = conProtocoloCompleto;
+      this.conMascarilla = conMascarilla;
+      this.sinMascarilla = sinMascarilla;
+      this.usoTotalDeGel = usoTotalDeGel;
+      this.conTemperatura = conTemperatura;
+
+      this.actualizarComponente++;
     },
   },
 };

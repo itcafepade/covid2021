@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Registro;
 use Illuminate\Http\Request;
+use MongoDB\BSON\Decimal128;
 
 class RegistroController extends Controller
 {
@@ -14,7 +15,18 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        //
+        $registros = Registro::take(50)->orderBy('created_at', 'desc')->get();
+
+        $registrosConFormato = [];
+
+        foreach ($registros as $registro) {
+            $temperatura = $registro['temperatura'];
+            $usoDeGel = $registro['usoDeGel'];
+            $registro['temperatura'] = strval(new Decimal128($temperatura));
+            $registro['usoDeGel'] = strval(new Decimal128($usoDeGel));
+        }
+
+        return response()->json(['mensaje'=>'exito', 'registros'=>$registros]);
     }
 
     /**

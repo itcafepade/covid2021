@@ -16,9 +16,10 @@ class CreateRegistrosTable extends Migration
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
             $table->string('temperatura');
-            $table->boolean('protocolo_completo');
+            $table->boolean('protocoloCompleto');
             $table->boolean('conMascarilla');
             $table->boolean('sinMascarilla');
+            $table->string('usoDeGel');
             $table->timestamps();
         });
     }
