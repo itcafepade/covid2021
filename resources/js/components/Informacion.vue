@@ -103,7 +103,7 @@ export default {
   },
   methods: {
     calcularPorcentaje(numero = 0) {
-      return (numero / this.totalDatos) * 100;
+      return ((numero / this.totalDatos) * 100).toFixed(2);
     },
   },
 };

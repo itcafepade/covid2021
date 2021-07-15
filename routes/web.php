@@ -26,6 +26,7 @@ Route::group(['middleware' => 'auth'], function () {
 
     //Registros
     Route::resource('/api/registro', App\Http\Controllers\RegistroController::class);
+    Route::post('/api/filtrarRegistro', [App\Http\Controllers\RegistroController::class, 'filtrarPorFechas']);
 });
 
 Auth::routes();

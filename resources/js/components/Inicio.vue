@@ -181,18 +181,31 @@
           </div>
           <div class="modal-body">
             <h5 class="lead mb-0 text-darkblue">Inicio</h5>
-            <input type="date" class="form-control mb-3" id="filterStartDate" />
-            <input type="time" class="form-control mb-3" id="filterStartTime" />
+            <input
+              type="date"
+              class="form-control mb-3"
+              v-model="filtroFechaInicio"
+            />
             <h5 class="lead mb-0 text-darkblue">Final</h5>
-            <input type="date" class="form-control mb-3" id="filterEndDate" />
-            <input type="time" class="form-control mb-3" id="filterEndTime" />
+            <input
+              type="date"
+              class="form-control mb-3"
+              v-model="filtroFechaFinal"
+            />
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-warning" id="cleanFilter">
+            <button
+              type="button"
+              class="btn btn-warning"
+              @click="limpiarFiltro()"
+            >
               Limpiar
             </button>
-            <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button> -->
-            <button type="button" class="btn btn-primary" id="filter">
+            <button
+              type="button"
+              class="btn btn-primary"
+              @click="filtrarPorFecha()"
+            >
               Filtrar
             </button>
           </div>
@@ -209,7 +222,9 @@ import { Chart, registerables } from "chart.js";
 import informacion from "./Informacion.vue";
 import axios from "axios";
 import moment from "moment";
+import Alerta from "../libs/alerta";
 
+const alerta = new Alerta();
 Chart.register(...registerables);
 
 export default {
@@ -226,6 +241,11 @@ export default {
       usoTotalDeGel: 0,
       conTemperatura: 0,
       actualizarComponente: 0,
+      filtroHoraFinal: "",
+      filtroFechaFinal: "",
+      filtroHoraInicio: "",
+      filtroFechaInicio: "",
+      graficoCanvas: null,
     };
   },
   mounted() {
@@ -251,7 +271,7 @@ export default {
         this.registros = res.data.registros;
         this.calculoDeRegistros();
       } catch (error) {
-        alerta.mensaje("Error al obtener el valor de la temperatura.", "error");
+        alerta.mensaje("Error al obtener los registros.", "error");
       }
     },
     cargarGrafico() {
@@ -260,8 +280,6 @@ export default {
       let temperaturasMaximas = [];
       let datapoints = [];
       let j = 1;
-
-      console.log(this.registros[0].created_at);
 
       this.fechaInicio = moment(new Date(this.registros[0].created_at)).format(
         "DD/MM/YYYY"
@@ -277,7 +295,6 @@ export default {
         //   )
         // );
         labels.push(j.toString());
-        console.log(this.temperaturaMaxima);
         temperaturasMaximas.push(this.temperaturaMaxima);
         datapoints.push(this.registros[i].temperatura);
         j++;
@@ -304,8 +321,14 @@ export default {
         ],
       };
 
+      //Destruyendo canvas para reutilizarlo.
+      if (this.graficoCanvas != null) {
+        this.graficoCanvas.destroy();
+        this.graficoCanvas = null;
+      }
+
       const grafico = this.$refs.myChart.getContext("2d");
-      new Chart(grafico, {
+      this.graficoCanvas = new Chart(grafico, {
         type: "line",
         data: data,
         options: {
@@ -376,6 +399,47 @@ export default {
       this.conTemperatura = conTemperatura;
 
       this.actualizarComponente++;
+    },
+    limpiarFiltro() {
+      this.filtroHoraFinal = "";
+      this.filtroFechaFinal = "";
+      this.filtroHoraInicio = "";
+      this.filtroFechaInicio = "";
+    },
+    async filtrarPorFecha() {
+      const fechaInicio = moment(new Date(this.filtroFechaInicio)).format(
+        "YYYY-MM-DD 00:01"
+      );
+
+      const fechaFinal = moment(new Date(this.filtroFechaFinal)).format(
+        "YYYY-MM-DD 23:59"
+      );
+
+      console.log(fechaInicio);
+
+      try {
+        const res = await axios.post("api/filtrarRegistro", {
+          fechaInicio: fechaInicio,
+          fechaFinal: fechaFinal,
+        });
+
+        if (res.data.registros.length == 0) {
+          alerta.mensaje(
+            "No se encontraron registros entre las fechas especificadas.",
+            "info"
+          );
+
+          return;
+        }
+
+        this.registros = res.data.registros;
+        this.calculoDeRegistros();
+        this.cargarGrafico();
+        alerta.mensaje("Registros actualizados.", "success");
+      } catch (error) {
+        console.log(error);
+        alerta.mensaje("Error al obtener los registros.", "error");
+      }
     },
   },
 };
