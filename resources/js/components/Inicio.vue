@@ -365,13 +365,13 @@ export default {
           conTemperatura++;
         }
 
-        usoTotalDeGel += parseFloat(el.usoDeGel).toFixed(2);
+        usoTotalDeGel += parseFloat(el.usoDeGel);
       });
 
       this.conProtocoloCompleto = conProtocoloCompleto;
       this.conMascarilla = conMascarilla;
       this.sinMascarilla = sinMascarilla;
-      this.usoTotalDeGel = usoTotalDeGel;
+      this.usoTotalDeGel = usoTotalDeGel.toFixed(2);
       this.fotosSinMascarilla = fotosSinMascarilla;
       this.conTemperatura = conTemperatura;
 
