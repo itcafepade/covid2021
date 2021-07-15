@@ -20,6 +20,7 @@ class CreateRegistrosTable extends Migration
             $table->boolean('conMascarilla');
             $table->boolean('sinMascarilla');
             $table->string('usoDeGel');
+            $table->string('foto');
             $table->timestamps();
         });
     }

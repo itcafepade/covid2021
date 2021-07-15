@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
             'protocoloCompleto'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
-            'usoDeGel' => new Decimal128(0.04)
+            'usoDeGel' => new Decimal128(0.04),
+            'foto'=> '/imgs/sin-mascarilla.png',
         ]
         );
 
@@ -32,28 +33,32 @@ class DatabaseSeeder extends Seeder
             'protocolo_completo'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
-            'usoDeGel' => new Decimal128(0.04)
+            'usoDeGel' => new Decimal128(0.04),
+            'foto'=> '/imgs/sin-mascarilla.png',
         ]);
         Registro::create([
             'temperatura'=>new Decimal128(34),
             'protocolo_completo'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
-            'usoDeGel' => new Decimal128(0.04)
+            'usoDeGel' => new Decimal128(0.04),
+            'foto'=> '/imgs/sin-mascarilla.png',
             ]);
         Registro::create([
             'temperatura'=>new Decimal128(35),
             'protocolo_completo'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
-            'usoDeGel' => new Decimal128(0.04)
+            'usoDeGel' => new Decimal128(0.04),
+            'foto'=> '/imgs/sin-mascarilla.png',
         ]);
         Registro::create([
             'temperatura'=>new Decimal128(38),
             'protocolo_completo'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
-            'usoDeGel' => new Decimal128(0.04)
+            'usoDeGel' => new Decimal128(0.04),
+            'foto'=> '/imgs/sin-mascarilla.png',
         ]);
 
         Ajustes::create([

@@ -104,56 +104,24 @@
             </h5>
           </div>
           <div class="col-md-6">
-            <div class="container">
+            <div class="container" v-if="registros.length > 0">
               <div class="row pb-4">
-                <div class="col-md-3 col-sm-4 col-4 pt-4">
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    class="img-fluid rounded-circle"
-                  />
+                <div
+                  class="col-md-3 col-sm-4 col-4 pt-4"
+                  v-for="registro in registros"
+                  :key="registro._id"
+                >
+                  <img :src="registro.foto" class="img-fluid rounded-circle" />
                 </div>
-                <div class="col-md-3 col-sm-4 col-4 pt-4">
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    class="img-fluid rounded-circle"
-                  />
-                </div>
-                <div class="col-md-3 col-sm-4 col-4 pt-4">
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    class="img-fluid rounded-circle"
-                  />
-                </div>
-                <div class="col-md-3 col-sm-4 col-4 pt-4">
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    class="img-fluid rounded-circle"
-                  />
-                </div>
-                <div class="col-md-3 col-sm-4 col-4 pt-4">
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    class="img-fluid rounded-circle"
-                  />
-                </div>
-                <div class="col-md-3 col-sm-4 col-4 pt-4">
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    class="img-fluid rounded-circle"
-                  />
-                </div>
-                <div class="col-md-3 col-sm-4 col-4 pt-4">
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    class="img-fluid rounded-circle"
-                  />
-                </div>
-                <div class="col-md-3 col-sm-4 col-4 pt-4">
-                  <img
-                    src="https://cdn.vuetifyjs.com/images/john.jpg"
-                    class="img-fluid rounded-circle"
-                  />
-                </div>
+              </div>
+            </div>
+            <div v-else class="text-center pt-3">
+              <div
+                class="spinner-border"
+                role="status"
+                style="width: 3rem; height: 3rem"
+              >
+                <span class="sr-only">Obteniendo los datos...</span>
               </div>
             </div>
           </div>
@@ -246,6 +214,7 @@ export default {
       filtroHoraInicio: "",
       filtroFechaInicio: "",
       graficoCanvas: null,
+      fotosSinMascarilla: [],
     };
   },
   mounted() {
@@ -374,6 +343,8 @@ export default {
       let sinMascarilla = 0;
       let usoTotalDeGel = 0;
       let conTemperatura = 0;
+      let fotosSinMascarilla = [];
+      let j = 0;
 
       this.registros.forEach((el) => {
         if (el.protocolo_completo) {
@@ -383,6 +354,11 @@ export default {
 
         if (!el.sinMascarilla) {
           sinMascarilla++;
+          if (j <= 8) {
+            //Hasta 8 fotos disponibles sin mascarilla
+            fotosSinMascarilla.push(el.foto);
+            j++;
+          }
         }
 
         if (el.temperatura >= this.temperaturaMaxima) {
@@ -396,6 +372,7 @@ export default {
       this.conMascarilla = conMascarilla;
       this.sinMascarilla = sinMascarilla;
       this.usoTotalDeGel = usoTotalDeGel;
+      this.fotosSinMascarilla = fotosSinMascarilla;
       this.conTemperatura = conTemperatura;
 
       this.actualizarComponente++;
@@ -407,15 +384,9 @@ export default {
       this.filtroFechaInicio = "";
     },
     async filtrarPorFecha() {
-      const fechaInicio = moment(new Date(this.filtroFechaInicio)).format(
-        "YYYY-MM-DD 00:01"
-      );
+      const fechaInicio = new Date(this.filtroFechaInicio);
 
-      const fechaFinal = moment(new Date(this.filtroFechaFinal)).format(
-        "YYYY-MM-DD 23:59"
-      );
-
-      console.log(fechaInicio);
+      const fechaFinal = new Date(this.filtroFechaFinal);
 
       try {
         const res = await axios.post("api/filtrarRegistro", {
