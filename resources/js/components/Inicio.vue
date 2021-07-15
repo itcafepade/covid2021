@@ -365,7 +365,7 @@ export default {
           conTemperatura++;
         }
 
-        usoTotalDeGel += parseFloat(el.usoDeGel);
+        usoTotalDeGel += parseFloat(el.usoDeGel).toFixed(2);
       });
 
       this.conProtocoloCompleto = conProtocoloCompleto;
