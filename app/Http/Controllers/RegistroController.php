@@ -6,6 +6,7 @@ use App\Models\Registro;
 use Illuminate\Http\Request;
 use MongoDB\BSON\Decimal128;
 use MongoDB\BSON\UTCDateTime as MongoDate;
+use Storage;
 
 class RegistroController extends Controller
 {
@@ -38,7 +39,21 @@ class RegistroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $url = "/imgs/sinMascarilla.png";
+
+        if ($request->hasFile('foto')) {
+            $foto = Storage::put('public', $request->foto);
+            $url = Storage::url($foto);
+        }
+
+        Registro::create([
+            'temperatura'=>new Decimal128($request->temperatura),
+            'protocoloCompleto'=> $request->protocoloCompleto,
+            'conMascarilla'=> $request->conMascarilla,
+            'sinMascarilla'=> $request->sinMascarilla,
+            'usoDeGel' => new Decimal128($request->usoDeGel),
+            'foto'=> $url,
+        ]);
     }
 
     /**
@@ -47,7 +62,7 @@ class RegistroController extends Controller
      * @param  \App\Models\registro  $registro
      * @return \Illuminate\Http\Response
      */
-    public function show(registro $registro)
+    public function show(Request $request)
     {
         //
     }

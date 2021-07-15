@@ -17,44 +17,45 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         //Creación de registros
-        Registro::create(
-            [
+        Registro::create([
             'temperatura'=>new Decimal128(36),
             'protocoloCompleto'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
             'usoDeGel' => new Decimal128(0.04),
             'foto'=> '/imgs/sin-mascarilla.png',
-        ]
-        );
+        ]);
 
         Registro::create([
             'temperatura'=>new Decimal128(33.7),
-            'protocolo_completo'=> true,
+            'protocoloCompleto'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
             'usoDeGel' => new Decimal128(0.04),
             'foto'=> '/imgs/sin-mascarilla.png',
         ]);
+
         Registro::create([
             'temperatura'=>new Decimal128(34),
-            'protocolo_completo'=> true,
-            'conMascarilla'=> true,
-            'sinMascarilla'=> true,
-            'usoDeGel' => new Decimal128(0.04),
-            'foto'=> '/imgs/sin-mascarilla.png',
-            ]);
-        Registro::create([
-            'temperatura'=>new Decimal128(35),
-            'protocolo_completo'=> true,
+            'protocoloCompleto'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
             'usoDeGel' => new Decimal128(0.04),
             'foto'=> '/imgs/sin-mascarilla.png',
         ]);
+
+        Registro::create([
+            'temperatura'=>new Decimal128(35),
+            'protocoloCompleto'=> true,
+            'conMascarilla'=> true,
+            'sinMascarilla'=> true,
+            'usoDeGel' => new Decimal128(0.04),
+            'foto'=> '/imgs/sin-mascarilla.png',
+        ]);
+
         Registro::create([
             'temperatura'=>new Decimal128(38),
-            'protocolo_completo'=> true,
+            'protocoloCompleto'=> true,
             'conMascarilla'=> true,
             'sinMascarilla'=> true,
             'usoDeGel' => new Decimal128(0.04),
