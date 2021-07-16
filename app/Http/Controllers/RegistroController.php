@@ -90,13 +90,16 @@ class RegistroController extends Controller
         //
     }
 
+    /**
+     * Devuelve los registros encontrados entre dos fechas específicas.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function filtrarPorFechas(Request $request)
     {
-        // $fechaInicio = $request->fechaInicio;
         $fechaInicio = new MongoDate(date_create(date($request->fechaInicio)));
         $fechaFinal = new MongoDate(date_create(date($request->fechaFinal)));
-
-        // dd($request);
 
         $registros = Registro::whereBetween(
             'created_at',
