@@ -221,11 +221,17 @@ export default {
     this.init();
   },
   methods: {
+    /**
+     * Invoca los métodos cuando recién se monta el componente.
+     */
     async init() {
       await this.obtenerAjustes();
       await this.obtenerRegistros();
       this.cargarGrafico();
     },
+    /**
+     * Obtiene el valor máximo de temperatura que luego será utilizado en la gráfica.
+     */
     async obtenerAjustes() {
       try {
         const res = await axios.get("api/ajustes");
@@ -234,6 +240,9 @@ export default {
         alerta.mensaje("Error al obtener el valor de la temperatura.", "error");
       }
     },
+    /**
+     * Obtiene los últimos 50 registros.
+     */
     async obtenerRegistros() {
       try {
         const res = await axios.get("api/registro");
@@ -243,6 +252,9 @@ export default {
         alerta.mensaje("Error al obtener los registros.", "error");
       }
     },
+    /**
+     * Crea un nuevo elemento del gráfico a partir de los registros.
+     */
     cargarGrafico() {
       const DATA_COUNT = this.registros.length;
       const labels = [];
@@ -335,6 +347,10 @@ export default {
         },
       });
     },
+    /**
+     * Realizar los cálculos de los registros obtenidos para luego ser dibujados
+     * en el componente Información.
+     */
     calculoDeRegistros() {
       this.totalDatos = this.registros.length;
 
@@ -377,12 +393,18 @@ export default {
 
       this.actualizarComponente++;
     },
+    /**
+     * Elimina los valores asignados a las variables de filtrarPorFechas.
+     */
     limpiarFiltro() {
       this.filtroHoraFinal = "";
       this.filtroFechaFinal = "";
       this.filtroHoraInicio = "";
       this.filtroFechaInicio = "";
     },
+    /**
+     * Actualiza los registros filtrando por una fecha de inicio y una fecha final.
+     */
     async filtrarPorFecha() {
       const fechaInicio = new Date(this.filtroFechaInicio);
 

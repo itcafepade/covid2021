@@ -102,6 +102,10 @@ export default {
     usoDeGel: 0,
   },
   methods: {
+    /**
+     * Calcula el porcentaje de los números que vaya recibiendo y
+     * lo formatea para 2 decimales.
+     */
     calcularPorcentaje(numero = 0) {
       return ((numero / this.totalDatos) * 100).toFixed(2);
     },
