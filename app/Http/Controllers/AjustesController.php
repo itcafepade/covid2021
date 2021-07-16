@@ -16,6 +16,11 @@ class AjustesController extends Controller
         return view('ajustes');
     }
 
+    /**
+     * Devuelve el valor máximo de la temperatura.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function obtenerAjustes()
     {
         $ajustes = Ajustes::all();
@@ -27,6 +32,12 @@ class AjustesController extends Controller
         return response()->json(['mensaje'=>'exito', 'ajustes'=>$ajuste]);
     }
 
+    /**
+     * Actualiza el valor máximo de la temperatura.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function actualizar(Request $request)
     {
         Ajustes::where('_id', $request->_id)
