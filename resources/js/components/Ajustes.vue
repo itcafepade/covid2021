@@ -47,6 +47,9 @@ export default {
     this.init();
   },
   methods: {
+    /**
+     * Obtiene el valor máximo de temperatura.
+     */
     async init() {
       try {
         const res = await axios.get("api/ajustes");
@@ -56,6 +59,9 @@ export default {
         alerta.mensaje("Error al obtener el valor de la temperatura.", "error");
       }
     },
+    /**
+     * Modifica el valor máximo de la temperatura.
+     */
     async modificar() {
       try {
         const ajustes = {
