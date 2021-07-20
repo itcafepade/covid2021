@@ -27,9 +27,9 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-dark-blue shadow-sm mb-0 ">
-            <div class="container pt-0 pb-0">
-                <a class="navbar-brand text-white" href="{{ url('/') }}">
-                    {{ config('app.name', 'App') }}
+            <div class="container mt-0 pb-0">
+                <a class="logo mr-2" href="{{ url('/') }}">
+                    <img src="{{ asset('imgs/logo.png')}}" class="logo" height="25px" width="100%">
                 </a>
                 <button class="navbar-toggler text-white" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
