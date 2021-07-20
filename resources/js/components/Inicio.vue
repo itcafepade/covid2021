@@ -21,7 +21,15 @@
               data-target="#modalFiltro"
               ><i class="bi bi-funnel"></i> Filtrar</a
             >
+            <a
+              href="#"
+              class="btn btn-success ml-1"
+              @click="init()"
+              v-if="!datosIniciales"
+              ><i class="bi bi-house"></i> Inicio</a
+            >
           </div>
+          <div class="col-md-12 col-sm-12 mb-3 pr-0"></div>
         </div>
       </div>
       <!-- Encabezado -->
@@ -131,7 +139,7 @@
     <!-- Galería -->
 
     <!-- Modal -->
-    <div class="modal fade" id="modalFiltro">
+    <div class="modal fade" id="modalFiltro" ref="modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
@@ -215,6 +223,7 @@ export default {
       filtroFechaInicio: "",
       graficoCanvas: null,
       fotosSinMascarilla: [],
+      datosIniciales: true,
     };
   },
   mounted() {
@@ -225,6 +234,7 @@ export default {
      * Invoca los métodos cuando recién se monta el componente.
      */
     async init() {
+      this.datosIniciales = true;
       await this.obtenerAjustes();
       await this.obtenerRegistros();
       this.cargarGrafico();
@@ -406,6 +416,7 @@ export default {
      * Actualiza los registros filtrando por una fecha de inicio y una fecha final.
      */
     async filtrarPorFecha() {
+      this.datosIniciales = false;
       const fechaInicio = new Date(this.filtroFechaInicio);
 
       const fechaFinal = new Date(this.filtroFechaFinal);
@@ -429,6 +440,7 @@ export default {
         this.calculoDeRegistros();
         this.cargarGrafico();
         alerta.mensaje("Registros actualizados.", "success");
+        $(this.$refs.modal).modal("hide");
       } catch (error) {
         console.log(error);
         alerta.mensaje("Error al obtener los registros.", "error");

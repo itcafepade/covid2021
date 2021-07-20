@@ -15558,6 +15558,10 @@ h6 {
   color: #fff;
 }
 
+h2 {
+  font-size: 1.2rem;
+}
+
 .text-white {
   color: #fff;
 }
@@ -15680,6 +15684,10 @@ h6 {
     z-index: 5;
     right: 0px;
     top: 30px;
+  }
+
+  h2 {
+    font-size: 1.4rem;
   }
 
   .landing {
