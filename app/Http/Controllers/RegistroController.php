@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Registro;
 use Illuminate\Http\Request;
 use MongoDB\BSON\Decimal128;
+use MongoDB\BSON\UTCDateTime as MongoDate;
+use Storage;
 
 class RegistroController extends Controller
 {
@@ -15,7 +17,7 @@ class RegistroController extends Controller
      */
     public function index()
     {
-        $registros = Registro::take(50)->orderBy('created_at', 'desc')->get();
+        $registros = Registro::take(50)->get();
 
         $registrosConFormato = [];
 
@@ -37,7 +39,21 @@ class RegistroController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $url = "/imgs/sinMascarilla.png";
+
+        if ($request->hasFile('foto')) {
+            $foto = Storage::put('public', $request->foto);
+            $url = Storage::url($foto);
+        }
+
+        Registro::create([
+            'temperatura'=>new Decimal128($request->temperatura),
+            'protocoloCompleto'=> $request->protocoloCompleto,
+            'conMascarilla'=> $request->conMascarilla,
+            'sinMascarilla'=> $request->sinMascarilla,
+            'usoDeGel' => new Decimal128($request->usoDeGel),
+            'foto'=> $url,
+        ]);
     }
 
     /**
@@ -46,7 +62,7 @@ class RegistroController extends Controller
      * @param  \App\Models\registro  $registro
      * @return \Illuminate\Http\Response
      */
-    public function show(registro $registro)
+    public function show(Request $request)
     {
         //
     }
@@ -72,5 +88,31 @@ class RegistroController extends Controller
     public function destroy(registro $registro)
     {
         //
+    }
+
+    /**
+     * Devuelve los registros encontrados entre dos fechas específicas.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function filtrarPorFechas(Request $request)
+    {
+        $fechaInicio = new MongoDate(date_create(date($request->fechaInicio)));
+        $fechaFinal = new MongoDate(date_create(date($request->fechaFinal)));
+
+        $registros = Registro::whereBetween(
+            'created_at',
+            [$fechaInicio, $fechaFinal]
+        )->get();
+
+        foreach ($registros as $registro) {
+            $temperatura = $registro['temperatura'];
+            $usoDeGel = $registro['usoDeGel'];
+            $registro['temperatura'] = strval(new Decimal128($temperatura));
+            $registro['usoDeGel'] = strval(new Decimal128($usoDeGel));
+        }
+
+        return response()->json(['message'=>'success', 'registros'=>$registros]);
     }
 }

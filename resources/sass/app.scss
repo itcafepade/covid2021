@@ -18,6 +18,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
+.logo {
+    width: 90px;
+}
+
 /**
 *
 *   Vista Ajustes
@@ -71,6 +75,10 @@ h6 {
     color: $white;
 }
 
+h2 {
+    font-size: 1.2rem;
+}
+
 .text-white {
     color: $white;
 }
@@ -81,11 +89,11 @@ h6 {
 
 .landing {
     width: 100%;
-    height: 600px;
+    height: 100%;
 }
 
 .rounded-graphic {
-    border-radius: 8%;
+    border-radius: 2%;
 }
 
 .img-covid img {
@@ -105,11 +113,6 @@ h6 {
 }
 
 @media (min-width: 1200px) {
-
-    .landing {
-        width: 100%;
-        height: 600px;
-    }
 
     .img-covid img {
         opacity: 30%;
@@ -133,11 +136,6 @@ h6 {
 
 @media (min-width: 992px) {
 
-    .landing {
-        width: 100%;
-        height: 700px;
-    }
-
     .img-covid img {
         opacity: 30%;
         height: 700px;
@@ -159,10 +157,6 @@ h6 {
 }
 
 @media (max-width: 992px) {
-    .landing {
-        width: 100%;
-        height: 550px;
-    }
 
     .img-covid img {
         opacity: 30%;
@@ -200,18 +194,12 @@ h6 {
         top: 30px;
     }
 
-    .landing {
-        width: 100%;
-        height: 610px;
+    h2 {
+        font-size: 1.4rem;
     }
 }
 
 @media (max-width: 768px) {
-
-    .landing {
-        width: 100%;
-        height: 820px;
-    }
 
     .img-covid img {
         top: 5px;
@@ -238,7 +226,7 @@ h6 {
     }
 }
 
-@media (max-width: 576px) {
+@media (min-width: 376px) {
     .img-covid img {
         top: 5px;
         opacity: 30%;
@@ -262,10 +250,5 @@ h6 {
 
     canvas {
         width: 100%;
-    }
-
-    .landing {
-        width: 100%;
-        height: 745px;
     }
 }
