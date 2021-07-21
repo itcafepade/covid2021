@@ -96,13 +96,18 @@
     </div>
     <!-- SVG -->
     <!-- Galería -->
-    <div class="container-fluid bg-white">
+    <div class="container-fluid bg-white" id="divContSinMascarilla">
       <div class="container">
-        <div class="row">
+        <a
+          href="#divContSinMascarilla"
+          class="text-dark text-decoration-none"
+          @click="mostrarDiv"
+          ><h4 class="text-darkblue"><i class="bi bi-chevron-down"></i> Fotografías registradas sin mascarilla</h4></a>
+        <div class="row" id="divSinMascarilla">
           <div class="col-12 div col sm-12 div col-lg-12">
-            <h2 class="text-darkblue">
+            <!-- <h2 class="text-darkblue">
               Fotografías registradas sin mascarilla
-            </h2>
+            </h2> -->
           </div>
           <div class="col-md-5 pt-4 pb-4">
             <h5 class="text-darkblue">
@@ -196,8 +201,10 @@ import informacion from "./Informacion.vue";
 import axios from "axios";
 import moment from "moment";
 import Alerta from "../libs/alerta";
+import Interfaz from "../libs/interfaz";
 
 const alerta = new Alerta();
+const ui = new Interfaz();
 
 export default {
   components: { informacion },
@@ -219,6 +226,12 @@ export default {
       filtroFechaInicio: "",
       fotosSinMascarilla: [],
       datosIniciales: true,
+      animacionesOcultas: {
+        divSinMascarilla: {
+          nombre: "divSinMascarilla",
+          estado: false,
+        },
+      },
     };
   },
   mounted() {
@@ -345,6 +358,55 @@ export default {
       } catch (error) {
         console.log(error);
         alerta.mensaje("Error al obtener los registros.", "error");
+      }
+    },
+    /*
+    Muesta y Oculta el div de personas sin mascarilla
+    */
+    mostrarDiv(e) {
+      const icono = e.target.parentNode.parentNode.querySelector(".bi");
+      const div = e.target.parentNode.parentNode.querySelector(".row");
+
+      const ref = div.getAttribute("id");
+
+      // if (ref == this.animacionesOcultas.variables.nombre) {
+      //   let estado = ui.mostrarObjeto(
+      //     div,
+      //     this.animacionesOcultas.variables,
+      //     icono
+      //   );
+
+      //   this.animacionesOcultas.variables.estado = estado;
+      // }
+
+      // if (ref == this.animacionesOcultas.generales.nombre) {
+      //   const estado = ui.mostrarObjeto(
+      //     div,
+      //     this.animacionesOcultas.generales,
+      //     icono
+      //   );
+
+      //   this.animacionesOcultas.generales.estado = estado;
+      // }
+
+      // if (ref == this.animacionesOcultas.graficos.nombre) {
+      //   const estado = ui.mostrarObjeto(
+      //     div,
+      //     this.animacionesOcultas.graficos,
+      //     icono
+      //   );
+
+      //   this.animacionesOcultas.graficos.estado = estado;
+      // }
+
+      if (ref == this.animacionesOcultas.divSinMascarilla.nombre) {
+        const estado = ui.mostrarObjeto(
+          div,
+          this.animacionesOcultas.divSinMascarilla,
+          icono
+        );
+
+        this.animacionesOcultas.divSinMascarilla.estado = estado;
       }
     },
   },
