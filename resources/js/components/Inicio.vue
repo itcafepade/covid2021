@@ -104,7 +104,7 @@
           @click="mostrarDiv"
           ><i class="bi bi-chevron-up"></i> Fotografías registradas sin mascarilla
           </a>
-        <div class="row" id="divSinMascarilla">
+        <div class="row" id="divSinMascarilla" style="display:none;">
           <!-- <div class="col-12 div col sm-12 div col-lg-12">
             <h2 class="text-darkblue">
               Fotografías registradas sin mascarilla
