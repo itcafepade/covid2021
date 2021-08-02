@@ -256,4 +256,12 @@ h2 {
 .text-titulo{//titulo div fotografias
     font-size: 25px;
 }
+main{
+    height: 100%;
+    flex-wrap: wrap;
+    min-height: calc(100vh - 155px);
+}
 
+footer{
+    align-self: flex-end;
+}
