@@ -24,6 +24,16 @@
 
 /**
 *
+*   Galería de fotos
+*
+*/
+
+.grid-fotos {
+    display: inline-grid;
+}
+
+/**
+*
 *   Vista Ajustes
 *
 **/
@@ -51,12 +61,12 @@ img {
 **/
 
 * {
-    z-index: 10;
+    z-index: 2;
 }
 
 nav {
     position: relative;
-    z-index: 15;
+    z-index: 10;
 }
 
 .bg-dark-blue {
@@ -107,7 +117,7 @@ h2 {
     overflow: hidden;
     width: 410px;
     height: 600px;
-    z-index: 5;
+    z-index: 1;
     right: 0px;
     top: 30px;
 }

@@ -102,39 +102,40 @@
           href="#divContSinMascarilla"
           class="text-dark text-decoration-none"
           @click="mostrarDiv"
-          ><h4 class="text-darkblue"><i class="bi bi-chevron-down"></i> Fotografías registradas sin mascarilla</h4></a>
+          ><h4 class="text-darkblue">
+            <i class="bi bi-chevron-down"></i> Fotografías registradas sin
+            mascarilla
+          </h4></a
+        >
         <div class="row" id="divSinMascarilla">
-          <div class="col-12 div col sm-12 div col-lg-12">
-            <!-- <h2 class="text-darkblue">
-              Fotografías registradas sin mascarilla
-            </h2> -->
-          </div>
-          <div class="col-md-5 pt-4 pb-4">
+          <div class="col-md-4 pt-4 pb-4">
             <h5 class="text-darkblue">
               Estas fotografías son personas que no llevaban mascarilla o
               aquellas en las que el algoritmo no fue capaz de detectarla.
             </h5>
           </div>
-          <div class="col-md-6">
-            <div class="container" v-if="registros.length > 0">
-              <div class="row pb-4">
-                <div
-                  class="col-md-3 col-sm-4 col-4 pt-4"
-                  v-for="registro in registros"
-                  :key="registro._id"
-                >
-                  <img :src="registro.foto" class="img-fluid rounded-circle" />
-                </div>
+          <div class="col-md-8 mt-4" v-if="registros.length > 0">
+            <div class="row">
+              <div
+                class="col-md-4"
+                v-for="registro in registros"
+                :key="registro._id"
+              >
+                <img
+                  style="width: 110px; height: 110px"
+                  class="mt-0 ml-1 rounded-circle"
+                  :src="registro.foto"
+                />
               </div>
             </div>
-            <div v-else class="text-center pt-3">
-              <div
-                class="spinner-border"
-                role="status"
-                style="width: 3rem; height: 3rem"
-              >
-                <span class="sr-only">Obteniendo los datos...</span>
-              </div>
+          </div>
+          <div v-else class="mx-auto pt-3">
+            <div
+              class="spinner-border"
+              role="status"
+              style="width: 3rem; height: 3rem"
+            >
+              <span class="sr-only">Obteniendo los datos...</span>
             </div>
           </div>
         </div>
@@ -352,7 +353,7 @@ export default {
 
         this.registros = res.data.registros;
         this.calculoDeRegistros();
-        this.cargarGrafico();
+        // this.cargarGrafico();
         alerta.mensaje("Registros actualizados.", "success");
         $(this.$refs.modal).modal("hide");
       } catch (error) {
