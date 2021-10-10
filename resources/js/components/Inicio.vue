@@ -118,13 +118,14 @@
             <div class="row">
               <div
                 class="col-md-4"
-                v-for="registro in registros"
+                v-for="registro in fotosSinMascarilla"
                 :key="registro._id"
               >
+                {{ registro._id }}
                 <img
                   style="width: 110px; height: 110px"
                   class="mt-0 ml-1 rounded-circle"
-                  :src="registro.foto"
+                  :src="registro"
                 />
               </div>
             </div>
