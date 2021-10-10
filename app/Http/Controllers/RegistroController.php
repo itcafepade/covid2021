@@ -42,16 +42,17 @@ class RegistroController extends Controller
         $url = "/imgs/sinMascarilla.png";
 
         //Ejecutando archivo del script
-        $salida = exec('C:\Users\Leonel\face-mask-detector\face_detector.bat');
-
+        $salida = shell_exec('bash /home/covid2021/face-mask-detector/detecto-linux.sh');
+	//set_time_limit(100);
         //Leyendo el archivo txt
-        $resultados = fopen("C:\Users\Leonel\\face-mask-detector\\resultados.txt", "r");
-        $textoArchivo = fread($resultados, filesize("C:\Users\Leonel\\face-mask-detector\\resultados.txt"));
+        $resultados = fopen("/home/covid2021/face-mask-detector/resultados.txt", "r");
+        $textoArchivo = fread($resultados, filesize("/home/covid2021/face-mask-detector/resultados.txt"));
         fclose($resultados);
 
         //Cortando archivo en la parte de la imagen y el valor booleano de si tiene
         //mascarilla o no
-        $archivoSeccionado = explode("\r\n", $textoArchivo);
+        $archivoSeccionado = explode("\n", $textoArchivo);
+	//dd($archivoSeccionado);
         $conMascarilla = $archivoSeccionado[0]; //Booleano
         $imagenBase64 = $archivoSeccionado[1]; //Imagen Base64
 
