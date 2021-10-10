@@ -45,6 +45,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-white" href="{{ url('/ajustes') }}">Ajustes</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="{{ url('/bi') }}">Businness Intelligence</a>
+                        </li>
                         @endauth
                     </ul>
 
