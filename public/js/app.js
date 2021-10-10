@@ -77768,15 +77768,15 @@ var render = function() {
                   _c(
                     "div",
                     { staticClass: "row" },
-                    _vm._l(_vm.registros, function(registro) {
+                    _vm._l(_vm.fotosSinMascarilla, function(registro) {
                       return _c(
                         "div",
                         { key: registro._id, staticClass: "col-md-4" },
                         [
                           _c("img", {
-                            staticClass: "mt-0 ml-1 rounded-circle",
+                            staticClass: "mt-1 ml-1 rounded-circle",
                             staticStyle: { width: "110px", height: "110px" },
-                            attrs: { src: registro.foto }
+                            attrs: { src: registro }
                           })
                         ]
                       )

@@ -121,10 +121,9 @@
                 v-for="registro in fotosSinMascarilla"
                 :key="registro._id"
               >
-                {{ registro._id }}
                 <img
                   style="width: 110px; height: 110px"
-                  class="mt-0 ml-1 rounded-circle"
+                  class="mt-1 ml-1 rounded-circle"
                   :src="registro"
                 />
               </div>
