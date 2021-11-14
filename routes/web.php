@@ -22,6 +22,10 @@ Route::group(['middleware' => 'auth'], function () {
 
     //Registros
     Route::resource('/api/registro', App\Http\Controllers\RegistroController::class);
+
+    Route::get('/bi', function () {
+        return view('bi');
+    });
 });
 
 //Vista principal

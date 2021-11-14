@@ -6,6 +6,8 @@ use Illuminate\Database\Seeder;
 use App\Models\Registro;
 use App\Models\Ajustes;
 use MongoDB\BSON\Decimal128;
+use App\Models\User;
+use Hash;
 
 class DatabaseSeeder extends Seeder
 {
@@ -65,5 +67,11 @@ class DatabaseSeeder extends Seeder
         Ajustes::create([
             'temperatura' => new Decimal128(37.5),
         ]);
+
+	User::create([
+	    'name'=>'Administrador',
+	    'email'=>'admin@gmail.com',
+	    'password'=>Hash::make('adminItca')	
+	]);
     }
 }
