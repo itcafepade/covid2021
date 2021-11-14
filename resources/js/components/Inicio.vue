@@ -117,7 +117,7 @@
           <div class="col-md-8 mt-4" v-if="registros.length > 0">
             <div class="row">
               <div
-                class="col-md-4"
+                class="col-6 col-md-4"
                 v-for="registro in fotosSinMascarilla"
                 :key="registro._id"
               >
